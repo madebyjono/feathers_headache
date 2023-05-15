@@ -15,7 +15,17 @@ export const userSchema = {
   properties: {
     id: { type: 'number' },
     email: { type: 'string' },
-    password: { type: 'string' }
+    password: { type: 'string' },
+    cellphone: { type: 'number' },
+    verifyShortToken: { type: 'string' },
+    verifyExpires: { type: 'number' },
+    resetAttempts: { type: 'number' },
+    resetExpires: { type: 'number' },
+    resetShortToken: { type: 'string' },
+    resetToken: { type: 'string' },
+    verifyChanges: { type: 'string' },
+    isVerified: { type: 'boolean' },
+    verifyToken: { type: 'string' }
   }
 } as const
 export type User = FromSchema<typeof userSchema>
